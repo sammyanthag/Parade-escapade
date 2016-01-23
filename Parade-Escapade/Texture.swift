@@ -8,17 +8,17 @@ func textureImage(tile:Tile, _ direction:Direction, _ action:Action) -> String {
         switch action {
         case .Idle:
             switch direction {
-            case .N:return " drummajor_n"
-            case .E:return " drummajor_e"
-            case .S:return " drummajor_s"
-            case .W:return " drummajor_w"
+            case .N:return "drummajor_n"
+            case .E:return "drummajor_e"
+            case .S:return "drummajor_s"
+            case .W:return "drummajor_w"
             }
         case .Move:
             switch direction {
-            case .N:return " drummajor_n"
-            case .E:return " drummajor_e"
-            case .S:return " drummajor_s"
-            case .W:return " drummajor_w"
+            case .N:return "drummajor_n"
+            case .E:return "drummajor_e"
+            case .S:return "drummajor_s"
+            case .W:return "drummajor_w"
             }
         }
     case .Road:
