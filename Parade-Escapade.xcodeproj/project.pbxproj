@@ -17,6 +17,7 @@
 		CEFEB0F31C532A540062B48F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEB0F01C532A540062B48F /* Character.swift */; };
 		CEFEB0F41C532A540062B48F /* PathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEB0F11C532A540062B48F /* PathFinder.swift */; };
 		CEFEB0F51C532A540062B48F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEB0F21C532A540062B48F /* Global.swift */; };
+		CEFEB0F91C5363920062B48F /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CEFEB0F81C5363920062B48F /* sprites.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CEFEB0F01C532A540062B48F /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		CEFEB0F11C532A540062B48F /* PathFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathFinder.swift; sourceTree = "<group>"; };
 		CEFEB0F21C532A540062B48F /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		CEFEB0F81C5363920062B48F /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				CEFEB0DE1C531D480062B48F /* GameViewController.swift */,
 				CEFEB0E01C531D480062B48F /* Main.storyboard */,
 				CEFEB0E31C531D480062B48F /* Assets.xcassets */,
+				CEFEB0F81C5363920062B48F /* sprites.atlas */,
 				CEFEB0E51C531D480062B48F /* LaunchScreen.storyboard */,
 				CEFEB0E81C531D480062B48F /* Info.plist */,
 			);
@@ -140,6 +143,7 @@
 			files = (
 				CEFEB0E71C531D480062B48F /* LaunchScreen.storyboard in Resources */,
 				CEFEB0E41C531D480062B48F /* Assets.xcassets in Resources */,
+				CEFEB0F91C5363920062B48F /* sprites.atlas in Resources */,
 				CEFEB0E21C531D480062B48F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

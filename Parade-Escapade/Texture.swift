@@ -4,116 +4,64 @@ import SpriteKit
 func textureImage(tile:Tile, _ direction:Direction, _ action:Action) -> String {
     
     switch tile {
-    case .Droid:
+    case .DrumMajor:
         switch action {
         case .Idle:
             switch direction {
-            case .N:return "droid_n"
-            case .NE:return "droid_ne"
-            case .E:return "droid_e"
-            case .SE:return "droid_se"
-            case .S:return "droid_s"
-            case .SW:return "droid_sw"
-            case .W:return "droid_w"
-            case .NW:return "droid_nw"
+            case .N:return " drummajor_n"
+            case .E:return " drummajor_e"
+            case .S:return " drummajor_s"
+            case .W:return " drummajor_w"
             }
         case .Move:
             switch direction {
-            case .N:return "droid_n"
-            case .NE:return "droid_ne"
-            case .E:return "droid_e"
-            case .SE:return "droid_se"
-            case .S:return "droid_s"
-            case .SW:return "droid_sw"
-            case .W:return "droid_w"
-            case .NW:return "droid_nw"
+            case .N:return " drummajor_n"
+            case .E:return " drummajor_e"
+            case .S:return " drummajor_s"
+            case .W:return " drummajor_w"
             }
         }
-    case .Ground:
-        return "ground"
+    case .Road:
+        return "road"
     case .Wall:
-        switch direction {
-        case .N:return "wall_n"
-        case .NE:return "wall_ne"
-        case .E:return "wall_e"
-        case .SE:return "wall_se"
-        case .S:return "wall_s"
-        case .SW:return "wall_sw"
-        case .W:return "wall_w"
-        case .NW:return "wall_nw"
-        }
+        return "wall"
     }
     
 }
 
 protocol TextureObject {
-    static var sharedInstance: TextureDroid {get}
+    static var sharedInstance: TextureDrumMajor {get}
     var texturesIso:[[SKTexture]?] {get}
-    var textures2D:[[SKTexture]?] {get}
 }
 
-private let textureDroid = TextureDroid()
+private let textureDrumMajor = TextureDrumMajor()
 
-class TextureDroid: TextureObject  {
+class TextureDrumMajor: TextureObject  {
     
-    class var sharedInstance: TextureDroid {
-        return textureDroid
+    class var sharedInstance: TextureDrumMajor {
+        return textureDrumMajor
     }
     
     var texturesIso:[[SKTexture]?]
-    var textures2D:[[SKTexture]?]
     
     init() {
         
         texturesIso = [[SKTexture]?](count: 2, repeatedValue: nil)
-        textures2D = [[SKTexture]?](count: 2, repeatedValue: nil)
         
         //Idle
         texturesIso[Action.Idle.rawValue] = [
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.N, Action.Idle)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.NE, Action.Idle)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.E, Action.Idle)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.SE, Action.Idle)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.S, Action.Idle)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.SW, Action.Idle)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.W, Action.Idle)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.NW, Action.Idle)),
+            SKTexture(imageNamed:  textureImage(Tile.DrumMajor, Direction.N, Action.Idle)),
+            SKTexture(imageNamed:  textureImage(Tile.DrumMajor, Direction.E, Action.Idle)),
+            SKTexture(imageNamed:  textureImage(Tile.DrumMajor, Direction.S, Action.Idle)),
+            SKTexture(imageNamed:  textureImage(Tile.DrumMajor, Direction.W, Action.Idle)),
         ]
         
         //Move
         texturesIso[Action.Move.rawValue] = [
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.N, Action.Move)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.NE, Action.Move)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.E, Action.Move)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.SE, Action.Move)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.S, Action.Move)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.SW, Action.Move)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.W, Action.Move)),
-            SKTexture(imageNamed: "iso_3d_"+textureImage(Tile.Droid, Direction.NW, Action.Move)),
-        ]
-        
-        //Idle
-        textures2D[Action.Idle.rawValue] = [
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.N, Action.Idle)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.NE, Action.Idle)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.E, Action.Idle)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.SE, Action.Idle)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.S, Action.Idle)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.SW, Action.Idle)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.W, Action.Idle)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.NW, Action.Idle)),
-        ]
-        
-        //Move
-        textures2D[Action.Move.rawValue] = [
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.N, Action.Move)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.NE, Action.Move)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.E, Action.Move)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.SE, Action.Move)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.S, Action.Move)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.SW, Action.Move)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.W, Action.Move)),
-            SKTexture(imageNamed: textureImage(Tile.Droid, Direction.NW, Action.Move)),
+            SKTexture(imageNamed:  textureImage(Tile.DrumMajor, Direction.N, Action.Move)),
+            SKTexture(imageNamed:  textureImage(Tile.DrumMajor, Direction.E, Action.Move)),
+            SKTexture(imageNamed:  textureImage(Tile.DrumMajor, Direction.S, Action.Move)),
+            SKTexture(imageNamed:  textureImage(Tile.DrumMajor, Direction.W, Action.Move)),
         ]
         
     }

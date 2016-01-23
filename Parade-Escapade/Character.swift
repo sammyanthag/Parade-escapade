@@ -12,7 +12,6 @@ class Character {
     var facing:Direction
     var action:Action
     
-    var tileSprite2D:SKSpriteNode!
     var tileSpriteIso:SKSpriteNode!
     
     init() {
@@ -23,20 +22,16 @@ class Character {
 }
 
 //3
-class Droid:Character, TileObject {
+class DrumMajor:Character, TileObject {
     
-    let tile = Tile.Droid
+    let tile = Tile.DrumMajor
     
     func update() {
         
         if (self.tileSpriteIso != nil) {
             
-            self.tileSpriteIso.texture = TextureDroid.sharedInstance.texturesIso[self.action.rawValue]![self.facing.rawValue]
+            self.tileSpriteIso.texture = TextureDrumMajor.sharedInstance.texturesIso[self.action.rawValue]![self.facing.rawValue]
             
-        }
-        if (self.tileSprite2D != nil) {
-            
-            self.tileSprite2D.texture = TextureDroid.sharedInstance.textures2D[self.action.rawValue]![self.facing.rawValue]
         }
     }
 }
