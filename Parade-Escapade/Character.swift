@@ -35,3 +35,9 @@ class DrumMajor:Character, TileObject {
         }
     }
 }
+
+class Bando: Character {
+    enum Types {
+        case Flag, Trombone, Trumpet, Tuba, Snare, Bass, Flute
+    }
+}
