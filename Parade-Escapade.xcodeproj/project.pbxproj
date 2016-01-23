@@ -18,6 +18,7 @@
 		CEFEB0F41C532A540062B48F /* PathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEB0F11C532A540062B48F /* PathFinder.swift */; };
 		CEFEB0F51C532A540062B48F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEB0F21C532A540062B48F /* Global.swift */; };
 		CEFEB0F91C5363920062B48F /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CEFEB0F81C5363920062B48F /* sprites.atlas */; };
+		CEFEB0FB1C53D0C30062B48F /* Bando.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEB0FA1C53D0C30062B48F /* Bando.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CEFEB0F11C532A540062B48F /* PathFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathFinder.swift; sourceTree = "<group>"; };
 		CEFEB0F21C532A540062B48F /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		CEFEB0F81C5363920062B48F /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		CEFEB0FA1C53D0C30062B48F /* Bando.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bando.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				CEFEB0DC1C531D480062B48F /* GameScene.swift */,
 				CEFEB0EE1C532A470062B48F /* Texture.swift */,
 				CEFEB0F01C532A540062B48F /* Character.swift */,
+				CEFEB0FA1C53D0C30062B48F /* Bando.swift */,
 				CEFEB0F11C532A540062B48F /* PathFinder.swift */,
 				CEFEB0F21C532A540062B48F /* Global.swift */,
 				CEFEB0DE1C531D480062B48F /* GameViewController.swift */,
@@ -157,6 +160,7 @@
 			files = (
 				CEFEB0DD1C531D480062B48F /* GameScene.swift in Sources */,
 				CEFEB0EF1C532A470062B48F /* Texture.swift in Sources */,
+				CEFEB0FB1C53D0C30062B48F /* Bando.swift in Sources */,
 				CEFEB0F41C532A540062B48F /* PathFinder.swift in Sources */,
 				CEFEB0F31C532A540062B48F /* Character.swift in Sources */,
 				CEFEB0DF1C531D480062B48F /* GameViewController.swift in Sources */,

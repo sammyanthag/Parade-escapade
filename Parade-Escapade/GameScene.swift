@@ -59,26 +59,33 @@ enum Direction: Int {
 
 enum Tile: Int {
     
-    case Road, Wall, DrumMajor
+    case Road, Wall, DrumMajor, Flag, Trombone, Trumpet, Tuba, Snare, Bass, Flute
     
     var description:String {
         switch self {
         case Road:return "Road"
         case Wall:return "Wall"
-        case DrumMajor:return "drummajor"
+        case DrumMajor:return "DrumMajor"
         }
     }
 }
 
 enum Action: Int {
-    case Idle, Move
+    case Idle, Goto, Set, Dead, Chaos
     
     var description:String {
         switch self {
         case Idle:return "Idle"
-        case Move:return "Move"
+        case Goto:return "Goto"
+        case Set:return "Move"
+        case Dead:return "Dead"
+        case Chaos: return "Chaos"
         }
     }
+}
+
+enum Instrument: Int {
+    case Flag, Trombone, Trumpet, Tuba, Snare, Bass, Flute
 }
 
 class GameScene: SKScene {
@@ -98,8 +105,12 @@ class GameScene: SKScene {
     var tiles:[[(Int, Int)]]
     let tileSize = (width:32, height:32)
     
-    //Initializa Hero
+    //Initializa DrumMajor
     let hero = DrumMajor()
+    
+    //Initialize Bando array
+    var bandos:[Bando];
+    
     
     //Set frames for depth sorting optimization
     let nthFrame = 6
@@ -114,6 +125,8 @@ class GameScene: SKScene {
         tiles.append([(1,0), (0,0), (0,0), (0,0), (0,0)])
         tiles.append([(1,0), (0,0), (0,0), (0,0), (0,0)])
 
+        //Initiliza Starting Bandos
+        bandos = [Bando(type: Instrument.Flag), Bando(type: Instrument.Trumpet), Bando(type: Instrument.Snare)]
         
         viewIso = SKSpriteNode()
         

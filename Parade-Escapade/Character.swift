@@ -6,7 +6,6 @@ protocol TileObject {
     var tile:Tile {get}
 }
 
-//2
 class Character {
     
     var facing:Direction
@@ -33,11 +32,5 @@ class DrumMajor:Character, TileObject {
             self.tileSpriteIso.texture = TextureDrumMajor.sharedInstance.texturesIso[self.action.rawValue]![self.facing.rawValue]
             
         }
-    }
-}
-
-class Bando: Character {
-    enum Types {
-        case Flag, Trombone, Trumpet, Tuba, Snare, Bass, Flute
     }
 }
