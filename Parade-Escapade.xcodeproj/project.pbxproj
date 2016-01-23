@@ -13,6 +13,10 @@
 		CEFEB0E21C531D480062B48F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFEB0E01C531D480062B48F /* Main.storyboard */; };
 		CEFEB0E41C531D480062B48F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFEB0E31C531D480062B48F /* Assets.xcassets */; };
 		CEFEB0E71C531D480062B48F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFEB0E51C531D480062B48F /* LaunchScreen.storyboard */; };
+		CEFEB0EF1C532A470062B48F /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEB0EE1C532A470062B48F /* Texture.swift */; };
+		CEFEB0F31C532A540062B48F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEB0F01C532A540062B48F /* Character.swift */; };
+		CEFEB0F41C532A540062B48F /* PathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEB0F11C532A540062B48F /* PathFinder.swift */; };
+		CEFEB0F51C532A540062B48F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEB0F21C532A540062B48F /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		CEFEB0E31C531D480062B48F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEFEB0E61C531D480062B48F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEFEB0E81C531D480062B48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFEB0EE1C532A470062B48F /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+		CEFEB0F01C532A540062B48F /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		CEFEB0F11C532A540062B48F /* PathFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathFinder.swift; sourceTree = "<group>"; };
+		CEFEB0F21C532A540062B48F /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			children = (
 				CEFEB0D81C531D480062B48F /* AppDelegate.swift */,
 				CEFEB0DC1C531D480062B48F /* GameScene.swift */,
+				CEFEB0EE1C532A470062B48F /* Texture.swift */,
+				CEFEB0F01C532A540062B48F /* Character.swift */,
+				CEFEB0F11C532A540062B48F /* PathFinder.swift */,
+				CEFEB0F21C532A540062B48F /* Global.swift */,
 				CEFEB0DE1C531D480062B48F /* GameViewController.swift */,
 				CEFEB0E01C531D480062B48F /* Main.storyboard */,
 				CEFEB0E31C531D480062B48F /* Assets.xcassets */,
@@ -99,6 +111,7 @@
 				TargetAttributes = {
 					CEFEB0D41C531D480062B48F = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 6937ZPY7T6;
 					};
 				};
 			};
@@ -139,8 +152,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEFEB0DD1C531D480062B48F /* GameScene.swift in Sources */,
+				CEFEB0EF1C532A470062B48F /* Texture.swift in Sources */,
+				CEFEB0F41C532A540062B48F /* PathFinder.swift in Sources */,
+				CEFEB0F31C532A540062B48F /* Character.swift in Sources */,
 				CEFEB0DF1C531D480062B48F /* GameViewController.swift in Sources */,
 				CEFEB0D91C531D480062B48F /* AppDelegate.swift in Sources */,
+				CEFEB0F51C532A540062B48F /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,10 +268,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Parade-Escapade/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UIS.Parade-Escapade";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -262,10 +282,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Parade-Escapade/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UIS.Parade-Escapade";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
